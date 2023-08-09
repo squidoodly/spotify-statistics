@@ -4,4 +4,4 @@ Spotify Statistics is a java application designed to give you summary statistics
 ## How to use
 Simply request your extended Spotify listening data using [this](https://support.spotify.com/us/article/data-rights-and-privacy-settings/) link and place all the files named "Streaming_History_Audio_(year)_(number)" into the "data" folder.
 
-##Parameters
+## Parameters
