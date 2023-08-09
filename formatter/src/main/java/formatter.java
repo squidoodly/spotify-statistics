@@ -81,15 +81,12 @@ public class formatter {
             if (songStreak >= MIN_STREAK) {
               if (DUPLICATES_STORE) songStreaks.add(new Pair<>(currentSong.getKey(), currentSong.getValue()));
               else {
-                boolean flag = false;
                 for (Pair<String, Integer> streak : songStreaks) {
-                  String songName = streak.getKey();
-                  if (songName.equals(name) && streak.getValue() < time) {
-                    flag = true;
+                  if (streak.getKey().equals(name) && streak.getValue() < time) {
+                    streak.setValue(time);
                     break;
                   }
                 }
-                if (!flag) songStreaks.add(new Pair<>(currentSong.getKey(), currentSong.getValue()));
               }
             }
 
@@ -113,15 +110,12 @@ public class formatter {
             if (artistStreak >= MIN_STREAK) {
               if (DUPLICATES_STORE) artistStreaks.add(new Pair<>(currentArtist.getKey(), currentArtist.getValue()));
               else {
-                boolean flag = false;
                 for (Pair<String, Integer> streak : artistStreaks) {
-                  String artistNameTemp = streak.getKey();
-                  if (artistNameTemp.equals(artistName) && streak.getValue() < time) {
-                    flag = true;
+                  if (streak.getKey().equals(artistName) && streak.getValue() < time) {
+                    streak.setValue(time)
                     break;
                   }
                 }
-                if (!flag) artistStreaks.add(new Pair<>(currentArtist.getKey(), currentArtist.getValue()));
               }
             }
 
